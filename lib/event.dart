@@ -7,13 +7,12 @@ abstract class APIEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class FetchEvent extends APIEvent {
-  final int statusCode;
-  const FetchEvent(this.statusCode);
+class FetchData extends APIEvent {
+  const FetchData();
 
   @override
-  List<Object> get props => [statusCode];
+  List<Object> get props => [];
 
   @override
-  String toString() => 'FetchEvent: {$statusCode}';
+  String toString() => 'FetchData event dispatched';
 }
