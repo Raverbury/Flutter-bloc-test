@@ -5,7 +5,7 @@ import 'package:test/event.dart';
 import 'package:test/state.dart';
 
 void main() {
-  Bloc.observer = SimpleBlocObserver();
+  BlocOverrides.runZoned(() => null, blocObserver: SimpleBlocObserver());
   runApp(const MyApp());
 }
 
@@ -93,8 +93,8 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {
           BlocProvider.of<APIBloc>(context).add(const FetchData());
         },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        tooltip: 'Fetch data from API',
+        child: const Icon(Icons.refresh),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

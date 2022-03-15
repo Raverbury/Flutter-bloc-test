@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
 
+// events, sent from ui to bloc
+
 abstract class APIEvent extends Equatable {
   const APIEvent();
 

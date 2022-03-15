@@ -1,3 +1,5 @@
+// states, sent from bloc to ui
+
 abstract class APIState {
   final int statusCode;
   const APIState({required this.statusCode});
